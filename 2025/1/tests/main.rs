@@ -4,7 +4,7 @@ type TestResult = UnlockResult<()>;
 
 fn test_rotations(input: &[&str], solution: usize, end: i64, method: SecurityMethod) -> TestResult {
     let mut safe = SecretSafe::default();
-    let result = safe.unlock(input.iter().map(|s| *s), method)?;
+    let result = safe.unlock(input.iter().copied(), method)?;
     assert_eq!(result, solution);
     assert_eq!(safe.end, end);
 

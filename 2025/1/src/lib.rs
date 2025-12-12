@@ -16,7 +16,7 @@ impl From<io::Error> for UnlockError {
 impl fmt::Display for UnlockError {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
-            Self::IoError(e) => write!(f, "{}", e)?,
+            Self::IoError(e) => write!(f, "{e}")?,
             Self::InvalidRotation => write!(f, "invalid rotation")?,
         }
 
@@ -77,7 +77,7 @@ impl SecretSafe {
                     }
                 }
                 SecurityMethod::Any => {
-                    let factor = (shift / 100).abs() as usize;
+                    let factor = (shift / 100).unsigned_abs() as usize;
                     zeroes += factor;
                     let shift_rem = shift - factor as i64 * 100 * shift.signum();
                     let sum = old_current + shift_rem;
