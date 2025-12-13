@@ -7,5 +7,9 @@ name = "gift_shop"
 version = "0.1.0"
 
 [[package]]
+name = "lobby"
+version = "0.1.0"
+
+[[package]]
 name = "secret_entrance"
 version = "0.1.0"
