@@ -11,5 +11,9 @@ name = "lobby"
 version = "0.1.0"
 
 [[package]]
+name = "printing_department"
+version = "0.1.0"
+
+[[package]]
 name = "secret_entrance"
 version = "0.1.0"
