@@ -21,3 +21,7 @@ version = "0.1.0"
 [[package]]
 name = "secret_entrance"
 version = "0.1.0"
+
+[[package]]
+name = "trash_compactor"
+version = "0.1.0"
